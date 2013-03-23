@@ -1,0 +1,7 @@
+## generic files to ignore
+*~
+CMakeFiles
+pongian.dir
+Makefile
+cmake_install.cmake
+pongian
