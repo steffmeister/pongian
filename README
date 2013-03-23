@@ -1,0 +1,166 @@
+================================================================================
+PONGIAN README
+================================================================================
+brought to you with pongian v0.3.2.
+
+index
+--------
+0. introduction
+1. controls
+2. changelog
+3. known issues
+4. faq
+5. optional information
+
+
+0. introduction
+-----------------
+pongian is an free ping pong clone for linux and since v0.3pre-1 also for windows.
+it uses sdl to handle video stuff and keyboard events, sdl-image to view pictures and 
+SFont to display fonts (for information about sdl(-image) visit http://www.libsdl.org/,
+for information about SFont visit http://www.linux-games.com/).
+pongian is distributed under the GNU GENERAL PUBLIC LICENSE (GPL).
+
+
+1. controls
+-------------
+you can choose your controls via the control menue. by default player 1 controls through 
+the cursor buttons and player 2 through w, a, s and d. you can also use your mouse or your 
+joystick (experimental, i've never tested it myself).
+
+
+2. changelog
+--------------
+v0.3.2:
+???
+
+v0.3.1pre-0 aka v0.3.1:
+* fixed three buffer overflow bugs.
+* some small Makefile and readme improvements.
+* improvement of logman, the pongian logger.
+* '-help' shows version again.
+* about screen also shows version now.
+* new window decor icon.
+* fixed some memory bugs, stupid path bugs and a logman bug.
+
+v0.3pre-3 aka v0.3 (aka v0.3-win):
++ sound support, turn it off or on via the system menue.
+* xtheme work: pongian supports xtheme version 0 themes.
+* xtheme work: shadows, sound effects and other implentations.
+* small menue updates.
+* three very small code speed-ups.
+* Makefile update because of xtheme.
+* fixes, of course.
+* source code is now full windows-compatible.
+* small readme updates.
+* now using GPL instead of nothing.
+
+v0.3pre-2:
++ new skin information entry in video menue.
+* new skin engine: xtheme.
+* ported blacknwhite skin to xtheme.
+
+v0.3pre-1:
++ two new computer player: Al and Trinity.
++ a much better logger.
+* a new skin?
+* improved the advanced ball reflection system (abrs).
+* made source code more win32 compatible (first win32 port!).
+* some minor tweaks (bugfixes/improvements).
+
+v0.3pre-0:
++ implented mouse support.
++ implented joystick support (not tested!).
++ inital work for level support.
+
+v0.2pre-4a:
+* fixed a very stupid bug in the Makefile. pongian tarballs should now work perfectly.
+* fixed a bug which dismissed the fullscreen and bpp settings.
+
+v0.2pre-4:
++ added "known issues" section in readme.
+* again some code clean-ups.
+
+v0.2pre-3:
+* some code clean-ups.
+* new default skin (blacknwhite), which is much smaller (and more beautiful?) 
+  than v0.2pre-2 default skin.
+
+v0.2pre-2:
++ detection if all pictures are available (skin + fonts).
++ controls menue implented, you can now choose between two input methods: 
+  KBD1 (cursors) and KBD2 (w, a, s and d).
+* '-nc' now disables saving at end (you don't need -nc any more
+  if you want to use '-f', '-bXX' or '-t').
+* much better readme file.
+* config file is now in home directory (~/.pongian.conf)
+* changed menue behaviour (uses return instead of space).
+* better sdl init error handling (some memory was not free'd if sdl failed to init).
+* some changes in Makefile.
+* other bugfixes and improvements.
+- removed '--version' commandline parameter (you can use '--help' to view version).
+
+
+3. known issues
+-----------------
+- pongian has some memory bugs and due to them, it eats memory...
+  9 memory errors appear and 22082 bytes are eaten. (all-time-bug)
+- sometimes the abrs (advanced ball reflection system) does not really good work 
+  (reproduceable?) (2004-06-26)
+
+
+4. faq
+--------
+q: what do i need to run pongian?
+
+a: a working linux system with X, sdl 1.2.x and sdl_image. i think thats all.
+
+
+q: i want to play pongian using joystick, what do i have to do?
+
+a: just connect your joystick and start pongian. if you can select 'joystick' in the 
+   control menue, the joystick works. 
+   if you can't select it in the control menue, then something went wrong (*suprise*).
+   start pongian with the '-l1' switch and then take a look at the pongian.log file.
+   if it does NOT contain "(==) pongian: joystick support enabled." then it is not 
+   pongian's fault.
+   check if your joystick works with another application. if yes, then ???.
+
+
+q: how do i create themes?
+
+a: i think the best is to take a look at the default theme (specially the theme.conf!).
+   note: - you must use 640x480 images for background images
+		 - you must use images that are handled by sdl-image (eg png and jpeg)
+		 - too high quality images can slow-down pongian
+
+    
+q: for which platform(s) is pongian available?
+
+a: for linux and windows, if you want to test another platform just compile the source.
+   let me know if you run pongian on other systems than linux or windows.
+
+    
+q: i've found a bug in pongian, what should i do?
+
+a: first of all, if it is a bug, can you reproduce it? 
+   -> yes? then write to steffed@gmx.net, subject "pongian", write what you do to reproduce
+    the bug.
+   -> no? then don't even think about to write me.
+   if you found a bug in the documentation (missspels, senseless sentences, ... my english
+   is not perfect) also write to software@steffmeister.at, subject "pongian", write the line(s)
+   which contain(s) the bug(s) (maybe also the line number?).
+   NOTE: if you've found a bug in a theme, don't write to me if i am not the author!!
+    
+
+5. optional information
+-------------------------
+start pongian with '--help' to see some command-line options.
+if pongian acts funny, start pongian with '-l1' (-> "pongian.log") or '-l2' (-> console) 
+to activate logging.
+
+also visit my homepage at www.steffmeister.at.
+
+if you want to know more about pongian, like it or even when you hate it then
+write to steffed@gmx.net with subject "pongian".
+
