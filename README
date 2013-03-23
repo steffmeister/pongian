@@ -136,8 +136,8 @@ q: how do i create themes?
 a: i think the best is to take a look at the default theme (specially the
    theme.conf!).
    note: - you must use 640x480 images for background images
-		 - you must use images that are handled by sdl-image (eg png and jpeg)
-		 - too high quality images can slow-down pongian
+         - you must use images that are handled by sdl-image (eg png and jpeg)
+         - too high quality images can slow-down pongian
 
     
 q: for which platform(s) is pongian available?
